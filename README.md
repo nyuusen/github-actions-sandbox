@@ -5,3 +5,4 @@
 Link: https://www.udemy.com/course/cicd-with-github-actions
 
 [![backend](https://github.com/nyuusen/udemy-github-actions/actions/workflows/backend.yml/badge.svg)](https://github.com/nyuusen/udemy-github-actions/actions/workflows/backend.yml)
+[![frontend](https://github.com/nyuusen/udemy-github-actions/actions/workflows/frontend.yml/badge.svg?branch=main)](https://github.com/nyuusen/udemy-github-actions/actions/workflows/frontend.yml)
