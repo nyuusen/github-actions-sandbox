@@ -1,0 +1,23 @@
+name: Publish API doc
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ./openapi.yml
+
+jobs:
+  publish-api-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@4
+      
+      - name: Setup node
+        uses: actions/setup-node@4
+
+      - name: Generate Api doc
+        run: npx redocly build-docs ./openapi.yml -o docs/api.html
+
+  
