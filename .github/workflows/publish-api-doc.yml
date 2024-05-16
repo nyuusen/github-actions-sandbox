@@ -18,6 +18,6 @@ jobs:
         uses: actions/setup-node@v4
 
       - name: Generate Api doc
-        run: npx redocly build-docs ./openapi.yml -o docs/api.html
+        run: npx @redocly/cli build-docs ./openapi.yml -o docs/api.html
 
   
