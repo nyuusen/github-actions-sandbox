@@ -3,9 +3,9 @@ name: Publish API doc
 on:
   push:
     branches:
-      - main
-    paths:
-      - ./openapi.yml
+      - feature/test-publish-api-doc
+    # paths:
+    #   - ./openapi.yml
 
 jobs:
   publish-api-docs:
