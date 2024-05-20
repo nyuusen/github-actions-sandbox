@@ -1,12 +1,14 @@
 name: Publish API doc
 
+on: workflow_dispatch
+
 # mainへのmergeとopenapi.ymlの変更があれば実行されるトリガーを設定
-on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'openapi.yml'
+# on:
+#   push:
+#     branches:
+#       - main
+#     paths:
+#       - 'openapi.yml'
 
 jobs:
   publish-api-docs:
