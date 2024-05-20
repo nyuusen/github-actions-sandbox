@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - './openapi.yml'
+      - 'openapi.yml'
 
 jobs:
   publish-api-docs:
