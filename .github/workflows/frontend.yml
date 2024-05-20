@@ -1,12 +1,14 @@
 name: frontend
 
-on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'frontend/**'
-      - '.github/**'
+# 他ワークフローデバッグのため、一時的に手動実行のみにしている
+on: workflow_dispatch
+# on:
+#   push:
+#     branches:
+#       - main
+#     paths:
+#       - 'frontend/**'
+#       - '.github/**'
       
 defaults:
   run:
