@@ -1,5 +1,6 @@
 name: Publish API doc
 
+# mainへのmergeとopenapi.ymlの変更があれば実行されるトリガーを設定
 on:
   push:
     branches:
