@@ -23,11 +23,11 @@ jobs:
 
       - name: Publish API doc
         run: |
-          git checkout -b gh-pages
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b gh-pages
           git add -f ./docs/api.html
           git commit -m "publish api doc"
-          git push origin gh-pages
+          git push -f -u origin gh-pages
 
   
