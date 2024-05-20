@@ -3,10 +3,9 @@ name: Publish API doc
 on:
   push:
     branches:
-    # TODO: mainに変更する
-      - feature/test-publish-api-doc
-    # paths:
-    #   - ./openapi.yml
+      - main
+    paths:
+      - ./openapi.yml
 
 jobs:
   publish-api-docs:
@@ -28,6 +27,6 @@ jobs:
           git checkout -b gh-pages
           git add -f ./docs/api.html
           git commit -m "publish api doc"
-          git push -f -u origin gh-pages
+          git push -f -uorigin gh-pages
 
   
