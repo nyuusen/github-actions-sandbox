@@ -1,9 +1,8 @@
 # github-actions-sandbox
 
-本リポジトリは、GitHub Actionsをテストするためのリポジトリです。
+GitHub Actionsの動作検証用リポジトリ  
 
-以下のUdemy講座を実装したコードも含まれております。
-
+以下のUdemy講座を実装したコードも含まれております。  
 [GitHub Actionsで学ぶCI/CD入門―ビルド・デプロイの基本からAPI自動テスト・AWSへの自動デプロイまで](https://www.udemy.com/course/cicd-with-github-actions)
 
 
