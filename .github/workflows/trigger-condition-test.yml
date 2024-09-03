@@ -1,0 +1,21 @@
+name: Trigger Condition Test
+
+# mainブランチ且つci-test.txtに変更があった場合のみ本ワークフローを実行する
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'ci-test.txt'
+
+jobs:
+  trigger-condition-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+      
+      - name: Echo Test Message
+        run: echo "Test Message"
+
+  
