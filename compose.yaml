@@ -1,6 +1,0 @@
-services:
-  api: 
-    image: golang:1.23.1-bookworm
-    ports:
-      - "8000:8000"
-    restart: unless-stopped
