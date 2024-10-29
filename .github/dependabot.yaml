@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "monthly"  # Adjust based on your needs, e.g., "daily", "monthly"
+    open-pull-requests-limit: 1
+    commit-message:
+      prefix: "chore"
+    target-branch: "main"  # Change if using a different default branch
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
+    labels:
+      - "dependencies"
+      - "docker"
