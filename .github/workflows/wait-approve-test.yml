@@ -19,13 +19,36 @@ jobs:
       - name: Echo Wait Approve Test Message
         run: echo "Approved!"
 
-  end:
+  execute-if-success:
+    needs: wait-approve-test
+    if: ${{ success() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Execute If Success Message
+        run: echo "Execute If Success!"
+
+  execute-if-failure:
+    needs: wait-approve-test
+    if: ${{ failure() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Execute If Failure Message
+        run: echo "Execute If Failure!"
+  
+  execute-if-cancelled:
+    needs: wait-approve-test
+    if: ${{ cancelled() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Execute If Cancelled Message
+        run: echo "Execute If Cancelled!"
+
+  execute-if-not-cancelled:
     needs: wait-approve-test
     if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     steps:
-      # 承認が得られた場合のみ実行されることを期待する
-      - name: Echo End Message
-        run: echo "End!"
+      - name: Echo Execute If Not Cancelled Message
+        run: echo "Execute If Not Cancelled!"
 
   
