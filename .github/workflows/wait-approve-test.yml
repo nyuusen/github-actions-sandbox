@@ -1,0 +1,31 @@
+name: Wait Approve Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Start Message
+        run: echo "Start!"
+
+  wait-approve-test:
+    runs-on: ubuntu-latest
+    environment: wait-approve-test
+    steps:
+      - name: Echo Wait Approve Test Message
+        run: echo "Approved!"
+
+  end:
+    needs: wait-approve-test
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    steps:
+      # 承認が得られた場合のみ実行されることを期待する
+      - name: Echo End Message
+        run: echo "End!"
+
+  
